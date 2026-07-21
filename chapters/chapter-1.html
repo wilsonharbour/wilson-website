@@ -33,7 +33,8 @@
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- styles.css berada di folder utama -->
+  <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="reader-page">
@@ -41,7 +42,7 @@
   <header class="reader-topbar">
 
     <a
-      href="index.html#chapters"
+      href="../index.html#chapters"
       class="reader-back"
       aria-label="Back to all chapters"
     >
@@ -94,7 +95,7 @@
         ← Previous Chapter
       </span>
 
-      <a href="index.html#chapters">
+      <a href="../index.html#chapters">
         All Chapters
       </a>
 
@@ -110,70 +111,59 @@
   </main>
 
   <script>
-    document.addEventListener(
-      "DOMContentLoaded",
-      function () {
-        const comicPanels =
-          document.getElementById("comicPanels");
+    document.addEventListener("DOMContentLoaded", function () {
+      const comicPanels =
+        document.getElementById("comicPanels");
 
-        const totalPanels = 56;
+      const totalPanels = 56;
 
-        for (
-          let panelNumber = 1;
-          panelNumber <= totalPanels;
-          panelNumber++
-        ) {
-          const fileNumber =
-            String(panelNumber).padStart(2, "0");
+      for (
+        let panelNumber = 1;
+        panelNumber <= totalPanels;
+        panelNumber++
+      ) {
+        const fileNumber =
+          String(panelNumber).padStart(2, "0");
 
-          const figure =
-            document.createElement("figure");
+        const figure =
+          document.createElement("figure");
 
-          figure.className = "comic-panel";
+        figure.className = "comic-panel";
 
-          const image =
-            document.createElement("img");
+        const image =
+          document.createElement("img");
 
-          image.src =
-            `assets/chapters/chapter-1/Panel-${fileNumber}.png`;
+        image.src =
+          `../assets/chapters/chapter-1/Panel-${fileNumber}.png`;
 
-          image.alt =
-            `Wilson Chapter 1 — Panel ${panelNumber}`;
+        image.alt =
+          `Wilson Chapter 1 — Panel ${panelNumber}`;
 
-          image.decoding = "async";
+        image.decoding = "async";
 
-          if (panelNumber <= 3) {
-            image.loading = "eager";
-            image.fetchPriority = "high";
-          } else {
-            image.loading = "lazy";
-          }
-
-          image.addEventListener(
-            "load",
-            function () {
-              image.classList.add("loaded");
-            }
-          );
-
-          image.addEventListener(
-            "error",
-            function () {
-              figure.classList.add(
-                "panel-load-error"
-              );
-
-              console.error(
-                `Panel tidak ditemukan: ${image.src}`
-              );
-            }
-          );
-
-          figure.appendChild(image);
-          comicPanels.appendChild(figure);
+        if (panelNumber <= 3) {
+          image.loading = "eager";
+          image.fetchPriority = "high";
+        } else {
+          image.loading = "lazy";
         }
+
+        image.addEventListener("load", function () {
+          image.classList.add("loaded");
+        });
+
+        image.addEventListener("error", function () {
+          figure.classList.add("panel-load-error");
+
+          console.error(
+            `Panel tidak ditemukan: ${image.src}`
+          );
+        });
+
+        figure.appendChild(image);
+        comicPanels.appendChild(figure);
       }
-    );
+    });
   </script>
 
 </body>
