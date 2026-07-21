@@ -2,78 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Read Chapter 1: The Storm from the Wilson Universe."
+  >
+
+  <meta name="theme-color" content="#080b08">
 
   <title>Chapter 1 — The Storm | Wilson</title>
 
-  <link rel="stylesheet" href="../styles.css">
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="reader-page">
 
   <header class="reader-topbar">
-    <a href="index.html" class="reader-back">← Back to Chapters</a>
+
+    <a
+      href="index.html#chapters"
+      class="reader-back"
+      aria-label="Back to all chapters"
+    >
+      ← Back to Chapters
+    </a>
+
     <span>Chapter 1 of 23</span>
+
   </header>
 
   <main class="comic-reader">
 
     <section class="reader-heading">
-      <p class="eyebrow">WILSON UNIVERSE</p>
+
+      <p class="eyebrow">
+        WILSON UNIVERSE
+      </p>
+
       <h1>Chapter 1</h1>
+
       <h2>The Storm</h2>
-      <p>Every legend begins with loss.</p>
-    </section>
 
-    <section class="comic-panels">
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-1.png" alt="Wilson Chapter 1 panel 1">
-      </figure>
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-2.png" alt="Wilson Chapter 1 panel 2">
-      </figure>
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-3.png" alt="Wilson Chapter 1 panel 3">
-      </figure>
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-4.png" alt="Wilson Chapter 1 panel 4">
-      </figure>
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-5.png" alt="Wilson Chapter 1 panel 5">
-      </figure>
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-6.png" alt="Wilson Chapter 1 panel 6">
-      </figure>
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-7.png" alt="Wilson Chapter 1 panel 7">
-      </figure>
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-8.png" alt="Wilson Chapter 1 panel 8">
-      </figure>
-
-      <figure class="comic-panel">
-        <img src="../assets/chapters/chapter-1/panel-9.png" alt="Wilson Chapter 1 panel 9">
-      </figure>
+      <p>
+        Every legend begins with loss.
+      </p>
 
     </section>
 
-    <nav class="reader-navigation">
-      <span class="reader-disabled">← Previous Chapter</span>
+    <section
+      class="comic-panels"
+      id="comicPanels"
+      aria-label="Wilson Chapter 1 comic panels"
+    ></section>
 
-      <a href="index.html">All Chapters</a>
+    <noscript>
+      <p class="reader-error">
+        JavaScript must be enabled to display this chapter.
+      </p>
+    </noscript>
 
-      <span class="reader-disabled">Next Chapter →</span>
+    <nav
+      class="reader-navigation"
+      aria-label="Chapter navigation"
+    >
+
+      <span
+        class="reader-disabled"
+        aria-disabled="true"
+      >
+        ← Previous Chapter
+      </span>
+
+      <a href="index.html#chapters">
+        All Chapters
+      </a>
+
+      <span
+        class="reader-disabled"
+        aria-disabled="true"
+      >
+        Next Chapter →
+      </span>
+
     </nav>
 
   </main>
+
+  <script>
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+        const comicPanels =
+          document.getElementById("comicPanels");
+
+        const totalPanels = 56;
+
+        for (
+          let panelNumber = 1;
+          panelNumber <= totalPanels;
+          panelNumber++
+        ) {
+          const fileNumber =
+            String(panelNumber).padStart(2, "0");
+
+          const figure =
+            document.createElement("figure");
+
+          figure.className = "comic-panel";
+
+          const image =
+            document.createElement("img");
+
+          image.src =
+            `assets/chapters/chapter-1/Panel-${fileNumber}.png`;
+
+          image.alt =
+            `Wilson Chapter 1 — Panel ${panelNumber}`;
+
+          image.decoding = "async";
+
+          if (panelNumber <= 3) {
+            image.loading = "eager";
+            image.fetchPriority = "high";
+          } else {
+            image.loading = "lazy";
+          }
+
+          image.addEventListener(
+            "load",
+            function () {
+              image.classList.add("loaded");
+            }
+          );
+
+          image.addEventListener(
+            "error",
+            function () {
+              figure.classList.add(
+                "panel-load-error"
+              );
+
+              console.error(
+                `Panel tidak ditemukan: ${image.src}`
+              );
+            }
+          );
+
+          figure.appendChild(image);
+          comicPanels.appendChild(figure);
+        }
+      }
+    );
+  </script>
 
 </body>
 </html>
