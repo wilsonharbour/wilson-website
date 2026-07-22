@@ -3,184 +3,438 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ccff00">
-  <meta name="description" content="Wilson is a young black rooster searching for his mother across the eight kingdoms. Follow the story and join the Navigators.">
-  <title>Wilson — Every Journey Begins With an Identity</title>
+  <meta name="theme-color" content="#07120d">
+  <meta name="description" content="Wilson Universe follows a young black rooster across a world of storms, mentors, navigators, and new kingdoms.">
+  <title>Wilson Universe — Every Legend Begins With a Journey</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Wilson home">
-      <img src="assets/robinhood-feather.png" alt="" class="brand-mark">
-      <span>WILSON</span>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Wilson Universe home">
+      <img src="assets/branding/robinhood-feather.png" alt="" class="brand-mark">
+      <span class="brand-copy">
+        <strong>WILSON</strong>
+        <small>UNIVERSE</small>
+      </span>
     </a>
-    <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="nav">
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="primaryNav"
+      aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary navigation">
       <a href="#story" data-en="Story" data-id="Cerita">Story</a>
+      <a href="#characters" data-en="Characters" data-id="Karakter">Characters</a>
       <a href="#identity" data-en="Navigator ID" data-id="ID Navigator">Navigator ID</a>
-      <a href="#chapters" data-en="Chapters" data-id="Chapter">Chapters</a>
       <a href="#token" data-en="$WILSON" data-id="$WILSON">$WILSON</a>
       <a href="#community" data-en="Community" data-id="Komunitas">Community</a>
     </nav>
-    <button class="lang-button" id="langButton" aria-label="Switch language">ID</button>
+
+    <div class="header-actions">
+      <a class="header-cta" href="chapters/chapter-01.html"
+         data-en="Read the Story" data-id="Baca Cerita">
+        Read the Story
+      </a>
+
+      <button class="lang-button" id="langButton" type="button" aria-label="Switch language">
+        ID
+      </button>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow" data-en="A STORY-FIRST COMMUNITY" data-id="KOMUNITAS YANG DIMULAI DARI CERITA">A STORY-FIRST COMMUNITY</p>
-        <h1 data-en="Help Wilson find his mother." data-id="Bantu Wilson menemukan ibunya.">Help Wilson find his mother.</h1>
-        <p class="hero-text"
-           data-en="A young black rooster. A lost home. Eight kingdoms. One journey built on hope, courage, survival, friendship, and trust."
-           data-id="Seekor ayam jantan hitam muda. Rumah yang hilang. Delapan kerajaan. Satu perjalanan tentang harapan, keberanian, bertahan hidup, persahabatan, dan kepercayaan.">
-          A young black rooster. A lost home. Eight kingdoms. One journey built on hope, courage, survival, friendship, and trust.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#chapters" data-en="Read the journey" data-id="Baca perjalanannya">Read the journey</a>
-          <a class="button secondary" href="#identity" data-en="View Navigator ID" data-id="Lihat ID Navigator">View Navigator ID</a>
-        </div>
-        <div class="launch-note">
-          <span class="status-dot"></span>
-          <span data-en="Official contract address will appear only after launch." data-id="Contract address resmi hanya akan ditampilkan setelah peluncuran.">
-            Official contract address will appear only after launch.
-          </span>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="glow"></div>
-        <img src="assets/wilson-logo.png" alt="Wilson, a young black rooster with a red scarf">
-      </div>
-    </section>
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <img
+        class="hero-background"
+        src="assets/hero/hero-main.png"
+        alt="Wilson standing at Robinhood Republic Harbor at sunrise">
 
-    <section class="section story" id="story">
-      <div class="section-heading">
-        <p class="eyebrow" data-en="THE STORY" data-id="CERITA">THE STORY</p>
-        <h2 data-en="More than a meme. A world with a reason to exist." data-id="Lebih dari meme. Sebuah dunia yang memiliki alasan untuk ada.">
-          More than a meme. A world with a reason to exist.
-        </h2>
-      </div>
-      <div class="story-grid">
-        <article class="story-card">
-          <span>01</span>
-          <h3 data-en="The Storm" data-id="Badai">The Storm</h3>
-          <p data-en="Wilson is separated from his mother and carried far from home."
-             data-id="Wilson terpisah dari ibunya dan hanyut jauh dari rumah.">
-            Wilson is separated from his mother and carried far from home.
-          </p>
-        </article>
-        <article class="story-card">
-          <span>02</span>
-          <h3 data-en="The Mentors" data-id="Para Mentor">The Mentors</h3>
-          <p data-en="Doge teaches hope, Shiba teaches courage, and Pepe teaches survival."
-             data-id="Doge mengajarkan harapan, Shiba mengajarkan keberanian, dan Pepe mengajarkan cara bertahan.">
-            Doge teaches hope, Shiba teaches courage, and Pepe teaches survival.
-          </p>
-        </article>
-        <article class="story-card">
-          <span>03</span>
-          <h3 data-en="The Navigators" data-id="Para Navigator">The Navigators</h3>
-          <p data-en="Cashcat, Kitsu, Hoodrat, and Captain Bull become part of Wilson's path."
-             data-id="Cashcat, Kitsu, Hoodrat, dan Captain Bull menjadi bagian dari perjalanan Wilson.">
-            Cashcat, Kitsu, Hoodrat, and Captain Bull become part of Wilson's path.
-          </p>
-        </article>
-      </div>
-    </section>
+      <div class="hero-shade" aria-hidden="true"></div>
 
-    <section class="section identity" id="identity">
-      <div class="identity-card">
-        <div class="identity-copy">
-          <p class="eyebrow" data-en="CHAPTER 23" data-id="CHAPTER 23">CHAPTER 23</p>
-          <h2 data-en="Wilson earns his first identity." data-id="Wilson memperoleh identitas pertamanya.">
-            Wilson earns his first identity.
-          </h2>
-          <p data-en="The portrait used on Wilson's Navigator ID becomes the official visual identity of $WILSON."
-             data-id="Potret yang digunakan pada ID Navigator Wilson menjadi identitas visual resmi $WILSON.">
-            The portrait used on Wilson's Navigator ID becomes the official visual identity of $WILSON.
+      <div class="hero-content container">
+        <div class="hero-copy">
+          <p class="eyebrow"
+             data-en="WELCOME TO THE WILSON UNIVERSE"
+             data-id="SELAMAT DATANG DI WILSON UNIVERSE">
+            WELCOME TO THE WILSON UNIVERSE
           </p>
-          <ul>
-            <li data-en="Official Robinhood-green background" data-id="Latar hijau Robinhood resmi">Official Robinhood-green background</li>
-            <li data-en="Locked Navigator Guild feather emblem" data-id="Emblem bulu Navigator Guild yang dikunci">Locked Navigator Guild feather emblem</li>
-            <li data-en="Identity Code reserved for the official contract address" data-id="Identity Code disediakan untuk contract address resmi">Identity Code reserved for the official contract address</li>
+
+          <h1 id="heroTitle">
+            <span data-en="Small rooster." data-id="Ayam kecil.">Small rooster.</span>
+            <em data-en="Big dreams." data-id="Mimpi besar.">Big dreams.</em>
+          </h1>
+
+          <p class="hero-tagline"
+             data-en="Every legend begins with a journey."
+             data-id="Setiap legenda dimulai dengan sebuah perjalanan.">
+            Every legend begins with a journey.
+          </p>
+
+          <p class="hero-text"
+             data-en="Follow Wilson, a young black rooster, as he crosses storms, discovers new kingdoms, and learns that courage is built one step at a time."
+             data-id="Ikuti Wilson, seekor ayam jantan hitam muda, saat ia melewati badai, menemukan kerajaan baru, dan belajar bahwa keberanian dibangun selangkah demi selangkah.">
+            Follow Wilson, a young black rooster, as he crosses storms, discovers new kingdoms, and learns that courage is built one step at a time.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="chapters/chapter-01.html">
+              <span data-en="Read Chapter 1" data-id="Baca Chapter 1">Read Chapter 1</span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a class="button secondary" href="#characters">
+              <span data-en="Meet the Characters" data-id="Temui Karakternya">Meet the Characters</span>
+            </a>
+          </div>
+
+          <ul class="hero-values" aria-label="Wilson Universe values">
+            <li><span>01</span><strong data-en="Hope" data-id="Harapan">Hope</strong></li>
+            <li><span>02</span><strong data-en="Courage" data-id="Keberanian">Courage</strong></li>
+            <li><span>03</span><strong data-en="Patience" data-id="Kesabaran">Patience</strong></li>
+            <li><span>04</span><strong data-en="Respect" data-id="Rasa hormat">Respect</strong></li>
           </ul>
         </div>
-        <div class="identity-image">
-          <img src="assets/navigator-id.png" alt="Wilson Navigator ID concept">
+      </div>
+
+      <a class="scroll-cue" href="#story" aria-label="Scroll to story">
+        <span data-en="Discover the journey" data-id="Jelajahi perjalanan">Discover the journey</span>
+        <b aria-hidden="true">↓</b>
+      </a>
+    </section>
+
+    <section class="section story-section" id="story">
+      <div class="container">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow" data-en="THE JOURNEY" data-id="PERJALANAN">THE JOURNEY</p>
+            <h2 data-en="Seventeen chapters. One growing legend."
+                data-id="Tujuh belas chapter. Satu legenda yang terus tumbuh.">
+              Seventeen chapters. One growing legend.
+            </h2>
+            <p class="section-intro"
+               data-en="Start with the storm and follow Wilson's path through every lesson, friendship, and new beginning."
+               data-id="Mulai dari badai dan ikuti perjalanan Wilson melalui setiap pelajaran, persahabatan, dan awal yang baru.">
+              Start with the storm and follow Wilson's path through every lesson, friendship, and new beginning.
+            </p>
+          </div>
+
+          <a class="text-link" href="chapters/chapter-01.html"
+             data-en="Start from Chapter 1 ↗"
+             data-id="Mulai dari Chapter 1 ↗">
+            Start from Chapter 1 ↗
+          </a>
+        </div>
+
+        <div class="chapter-grid">
+          <a class="chapter-card featured" href="chapters/chapter-01.html">
+            <img src="assets/panels/Panel-01.png" alt="Chapter 1 — The Storm" loading="eager">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy">
+              <small>CHAPTER 01</small>
+              <h3>THE STORM</h3>
+              <p data-en="The night that changes everything."
+                 data-id="Malam yang mengubah segalanya.">
+                The night that changes everything.
+              </p>
+            </div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-02.html">
+            <img src="assets/panels/Panel-10.png" alt="Chapter 2 — The Stranger" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 02</small><h3>THE STRANGER</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-03.html">
+            <img src="assets/panels/Panel-11.png" alt="Chapter 3 — Doge's Home" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 03</small><h3>DOGE'S HOME</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-04.html">
+            <img src="assets/panels/Panel-12.png" alt="Chapter 4 — The First Lesson" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 04</small><h3>THE FIRST LESSON</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-05.html">
+            <img src="assets/panels/Panel-13.png" alt="Chapter 5 — The First Step" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 05</small><h3>THE FIRST STEP</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-06.html">
+            <img src="assets/panels/Panel-14.png" alt="Chapter 6 — The First Trial" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 06</small><h3>THE FIRST TRIAL</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-07.html">
+            <img src="assets/panels/Panel-15.png" alt="Chapter 7 — An Old Friend" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 07</small><h3>AN OLD FRIEND</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-08.html">
+            <img src="assets/panels/Panel-19.png" alt="Chapter 8 — A New Companion" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 08</small><h3>A NEW COMPANION</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-09.html">
+            <img src="assets/panels/Panel-23.png" alt="Chapter 9 — The First Gate" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 09</small><h3>THE FIRST GATE</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-10.html">
+            <img src="assets/panels/Panel-27.png" alt="Chapter 10 — A Place to Rest" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 10</small><h3>A PLACE TO REST</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-11.html">
+            <img src="assets/panels/Panel-31.png" alt="Chapter 11 — Alone in Robinhood Republic" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 11</small><h3>ALONE IN ROBINHOOD REPUBLIC</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-12.html">
+            <img src="assets/panels/Panel-35.png" alt="Chapter 12 — The Forgotten Symbol" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 12</small><h3>THE FORGOTTEN SYMBOL</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-13.html">
+            <img src="assets/panels/Panel-39.png" alt="Chapter 13 — An Unexpected Friend" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 13</small><h3>AN UNEXPECTED FRIEND</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-14.html">
+            <img src="assets/panels/Panel-42.png" alt="Chapter 14 — Until Tomorrow" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 14</small><h3>UNTIL TOMORROW</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-15.html">
+            <img src="assets/panels/Panel-47.png" alt="Chapter 15 — A New Day" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 15</small><h3>A NEW DAY</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-16.html">
+            <img src="assets/panels/Panel-50.png" alt="Chapter 16 — The World Cup Final" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 16</small><h3>THE WORLD CUP FINAL</h3></div>
+          </a>
+
+          <a class="chapter-card" href="chapters/chapter-17.html">
+            <img src="assets/panels/Panel-54.png" alt="Chapter 17 — Back to the Journey" loading="lazy">
+            <span class="chapter-overlay"></span>
+            <div class="chapter-card-copy"><small>CHAPTER 17</small><h3>BACK TO THE JOURNEY</h3></div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section chapters" id="chapters">
-      <div class="section-heading split">
-        <div>
-          <p class="eyebrow" data-en="THE JOURNEY" data-id="PERJALANAN">THE JOURNEY</p>
-          <h2 data-en="Twenty-three chapters and still sailing." data-id="Dua puluh tiga chapter dan perjalanan masih berlanjut.">
-            Twenty-three chapters and still sailing.
+    <section class="section characters-section" id="characters">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-en="CHARACTER LIBRARY" data-id="PUSTAKA KARAKTER">CHARACTER LIBRARY</p>
+          <h2 data-en="Every traveler carries a different lesson."
+              data-id="Setiap pengembara membawa pelajaran yang berbeda.">
+            Every traveler carries a different lesson.
           </h2>
-        </div>
-        <a class="text-link" href="https://x.com/WilsonHarbour" target="_blank" rel="noreferrer"
-           data-en="Read on X ↗" data-id="Baca di X ↗">Read on X ↗</a>
-      </div>
-      <a href="chapters/index.html" class="btn primary">
-  <span
-    data-en="Read the Story"
-    data-id="Baca Ceritanya">
-    Read the Story
-  </span>
-</a>
-    </section>
-
-    <section class="section token" id="token">
-      <div class="token-panel">
-        <div>
-          <p class="eyebrow">$WILSON</p>
-          <h2 data-en="The token follows the story—not the other way around." data-id="Token mengikuti cerita—bukan cerita yang mengikuti token.">
-            The token follows the story—not the other way around.
-          </h2>
-          <p data-en="The official contract address will be published through Wilson's Navigator Identity Code after launch. Verify it only through official Wilson channels."
-             data-id="Contract address resmi akan dipublikasikan melalui Navigator Identity Code Wilson setelah peluncuran. Verifikasi hanya melalui kanal resmi Wilson.">
-            The official contract address will be published through Wilson's Navigator Identity Code after launch. Verify it only through official Wilson channels.
+          <p class="section-intro"
+             data-en="Meet the characters who shape Wilson's journey, from mentors and navigators to the captain of the open seas."
+             data-id="Temui para karakter yang membentuk perjalanan Wilson, mulai dari mentor dan navigator hingga kapten lautan terbuka.">
+            Meet the characters who shape Wilson's journey, from mentors and navigators to the captain of the open seas.
           </p>
         </div>
-        <div class="contract-box">
-          <span data-en="OFFICIAL CONTRACT ADDRESS" data-id="CONTRACT ADDRESS RESMI">OFFICIAL CONTRACT ADDRESS</span>
-          <code id="contractAddress">COMING SOON</code>
-          <button id="copyButton" disabled data-en="Copy after launch" data-id="Salin setelah peluncuran">Copy after launch</button>
+
+        <div class="character-grid">
+          <article class="character-card">
+            <img src="assets/characters/wilson/portrait.png" alt="Wilson" loading="lazy">
+            <div><small>THE YOUNG ROOSTER</small><h3>Wilson</h3><p data-en="Dreams & determination" data-id="Mimpi & keteguhan">Dreams & determination</p></div>
+          </article>
+
+          <article class="character-card">
+            <img src="assets/characters/doge/portrait.png" alt="Doge" loading="lazy">
+            <div><small>MENTOR OF HOPE</small><h3>Doge</h3><p data-en="Hope, kindness & wisdom" data-id="Harapan, kebaikan & kebijaksanaan">Hope, kindness & wisdom</p></div>
+          </article>
+
+          <article class="character-card">
+            <img src="assets/characters/shibainu/portrait.png" alt="Shiba Inu" loading="lazy">
+            <div><small>MENTOR OF COURAGE</small><h3>Shiba Inu</h3><p data-en="Courage through action" data-id="Keberanian melalui tindakan">Courage through action</p></div>
+          </article>
+
+          <article class="character-card">
+            <img src="assets/characters/cashcat/portrait.png" alt="Cashcat" loading="lazy">
+            <div><small>THE WISE NAVIGATOR</small><h3>Cashcat</h3><p data-en="Wisdom, strategy & guidance" data-id="Kebijaksanaan, strategi & arahan">Wisdom, strategy & guidance</p></div>
+          </article>
+
+          <article class="character-card">
+            <img src="assets/characters/kitsu/portrait.png" alt="Kitsu" loading="lazy">
+            <div><small>THE CHEERFUL NAVIGATOR</small><h3>Kitsu</h3><p data-en="Curiosity & optimism" data-id="Rasa ingin tahu & optimisme">Curiosity & optimism</p></div>
+          </article>
+
+          <article class="character-card">
+            <img src="assets/characters/hoodrat/portrait.png" alt="Hoodrat" loading="lazy">
+            <div><small>THE QUICK NAVIGATOR</small><h3>Hoodrat</h3><p data-en="Speed, cleverness & courage" data-id="Kecepatan, kecerdikan & keberanian">Speed, cleverness & courage</p></div>
+          </article>
+
+          <article class="character-card">
+            <img src="assets/characters/pepe/portrait.png" alt="Pepe" loading="lazy">
+            <div><small>MENTOR OF PATIENCE</small><h3>Pepe</h3><p data-en="Patience, wisdom & clarity" data-id="Kesabaran, kebijaksanaan & kejernihan">Patience, wisdom & clarity</p></div>
+          </article>
+
+          <article class="character-card">
+            <img src="assets/characters/captainbull/portrait.png" alt="Captain Bull" loading="lazy">
+            <div><small>CAPTAIN OF THE OPEN SEAS</small><h3>Captain Bull</h3><p data-en="Leadership, discipline & respect" data-id="Kepemimpinan, disiplin & rasa hormat">Leadership, discipline & respect</p></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section community" id="community">
-      <div class="section-heading">
-        <p class="eyebrow" data-en="JOIN THE NAVIGATORS" data-id="BERGABUNG DENGAN NAVIGATORS">JOIN THE NAVIGATORS</p>
-        <h2 data-en="The journey belongs to everyone who chooses to believe." data-id="Perjalanan ini milik setiap orang yang memilih untuk percaya.">
-          The journey belongs to everyone who chooses to believe.
-        </h2>
+    <section class="section identity-section" id="identity">
+      <div class="container">
+        <div class="identity-card">
+          <div class="identity-copy">
+            <p class="eyebrow" data-en="THE FIRST IDENTITY" data-id="IDENTITAS PERTAMA">THE FIRST IDENTITY</p>
+
+            <h2 data-en="A portrait that marks the beginning of a new chapter."
+                data-id="Sebuah potret yang menandai awal chapter baru.">
+              A portrait that marks the beginning of a new chapter.
+            </h2>
+
+            <p data-en="Wilson's Navigator ID represents direction, responsibility, and the courage to continue even when the destination is still far away."
+               data-id="ID Navigator Wilson melambangkan arah, tanggung jawab, dan keberanian untuk terus melangkah meski tujuan masih jauh.">
+              Wilson's Navigator ID represents direction, responsibility, and the courage to continue even when the destination is still far away.
+            </p>
+
+            <ul class="identity-points">
+              <li data-en="Official Wilson portrait" data-id="Potret resmi Wilson">Official Wilson portrait</li>
+              <li data-en="Robinhood feather insignia" data-id="Lambang bulu Robinhood">Robinhood feather insignia</li>
+              <li data-en="A symbol of direction and trust" data-id="Simbol arah dan kepercayaan">A symbol of direction and trust</li>
+            </ul>
+          </div>
+
+          <figure class="identity-image">
+            <img src="assets/branding/navigator-id.png" alt="Wilson Navigator ID">
+          </figure>
+        </div>
       </div>
-      <div class="community-links">
-        <a href="https://x.com/WilsonHarbour" target="_blank" rel="noreferrer">
-          <span>X / Twitter</span><strong>@WilsonHarbour ↗</strong>
-        </a>
-        <a href="https://t.me/+orwYcgxcOn1jNTI1" aria-disabled="true">
-          <span>Telegram</span><strong>Wilson Navigators</strong>
-        </a>
-        <a href="https://x.com/Navigator_0001" target="_blank" rel="noreferrer">
-          <span>Creator</span><strong>Navigator #0001 ↗</strong>
-        </a>
+    </section>
+
+    <section class="section token-section" id="token">
+      <div class="container">
+        <div class="token-panel">
+          <div class="token-copy">
+            <p class="eyebrow">$WILSON</p>
+            <h2 data-en="The token follows the story—not the other way around."
+                data-id="Token mengikuti cerita—bukan cerita yang mengikuti token.">
+              The token follows the story—not the other way around.
+            </h2>
+
+            <p data-en="The official contract address will be published only through Wilson's verified channels after launch."
+               data-id="Contract address resmi hanya akan dipublikasikan melalui kanal Wilson yang terverifikasi setelah peluncuran.">
+              The official contract address will be published only through Wilson's verified channels after launch.
+            </p>
+          </div>
+
+          <div class="contract-box">
+            <span data-en="OFFICIAL CONTRACT ADDRESS" data-id="CONTRACT ADDRESS RESMI">
+              OFFICIAL CONTRACT ADDRESS
+            </span>
+            <code id="contractAddress">COMING SOON</code>
+            <button id="copyButton" type="button" disabled
+                    data-en="Copy after launch"
+                    data-id="Salin setelah peluncuran">
+              Copy after launch
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section community-section" id="community">
+      <div class="container">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow" data-en="JOIN THE NAVIGATORS" data-id="BERGABUNG DENGAN NAVIGATORS">
+              JOIN THE NAVIGATORS
+            </p>
+            <h2 data-en="The journey belongs to everyone who chooses to believe."
+                data-id="Perjalanan ini milik setiap orang yang memilih untuk percaya.">
+              The journey belongs to everyone who chooses to believe.
+            </h2>
+          </div>
+        </div>
+
+        <div class="community-links">
+          <a href="https://x.com/WilsonHarbour" target="_blank" rel="noreferrer">
+            <span>X / Twitter</span>
+            <strong>@WilsonHarbour ↗</strong>
+          </a>
+
+          <a href="https://t.me/+orwYcgxcOn1jNTI1" target="_blank" rel="noreferrer">
+            <span>Telegram</span>
+            <strong>Wilson Navigators ↗</strong>
+          </a>
+
+          <a href="https://x.com/Navigator_0001" target="_blank" rel="noreferrer">
+            <span>Creator</span>
+            <strong>Navigator #0001 ↗</strong>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="brand footer-brand">
-      <img src="assets/robinhood-feather.png" alt="">
-      <span>WILSON</span>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand footer-brand" href="#home">
+          <img src="assets/branding/robinhood-feather.png" alt="">
+          <span class="brand-copy">
+            <strong>WILSON</strong>
+            <small>UNIVERSE</small>
+          </span>
+        </a>
+
+        <p data-en="Every legend begins with a journey."
+           data-id="Setiap legenda dimulai dengan sebuah perjalanan.">
+          Every legend begins with a journey.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#story" data-en="Story" data-id="Cerita">Story</a>
+        <a href="#characters" data-en="Characters" data-id="Karakter">Characters</a>
+        <a href="#identity" data-en="Navigator ID" data-id="ID Navigator">Navigator ID</a>
+        <a href="#community" data-en="Community" data-id="Komunitas">Community</a>
+      </div>
+
+      <small>
+        © <span id="year"></span> Wilson Universe. Story-first. Community-built.
+      </small>
     </div>
-    <p>Every Journey Begins With an Identity.</p>
-    <small>© <span id="year"></span> Wilson Community. Story-first. Community-built.</small>
   </footer>
 
   <script src="script.js"></script>
