@@ -237,7 +237,6 @@ h3,
   height: 100%;
   object-fit: cover;
   object-position: 75% center;
-  transform:scale(0.92);
 }
 
 .hero-shade {
