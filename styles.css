@@ -445,7 +445,7 @@ h3,
 .chapter-card.featured {
   grid-column: span 2;
   grid-row: span 2;
-  min-height: 678px;
+  min-height: 580px;
 }
 
 .chapter-card img {
