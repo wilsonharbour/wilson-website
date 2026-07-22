@@ -11,7 +11,7 @@
   --line: rgba(255,255,255,.11);
   --shadow: 0 28px 80px rgba(0,0,0,.45);
   --radius: 24px;
-  --container: 1240px;
+  --container: 1500px;
   --header-height: 76px;
 }
 
@@ -75,7 +75,7 @@ h3,
 }
 
 .container {
-  width: min(var(--container), calc(100% - 40px));
+  width: min(var(--container), calc(100% - 24px));
   margin-inline: auto;
 }
 
