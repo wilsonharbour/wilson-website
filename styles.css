@@ -443,9 +443,9 @@ h3,
 }
 
 .chapter-card.featured {
-  grid-column: auto;
-  grid-row: auto;
-  min-height: 300px;
+  grid-column: span 2;
+  grid-row: span 1;
+  min-height: 430px;
 }
 
 .chapter-card img {
@@ -848,7 +848,7 @@ h3,
   }
 
   .chapter-card.featured {
-    min-height: 500px;
+    min-height: 420px;
   }
 
   .identity-card,
@@ -883,7 +883,7 @@ h3,
   }
 
   .hero {
-    min-height: 860px;
+    min-height: 780px;
   }
 
   .hero-background {
@@ -891,7 +891,21 @@ h3,
   }
 
   .hero-content {
-    padding-top: 260px;
+    padding-top: calc(var(--header-height) + 190px);
+    padding-bottom: 88px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 12vw, 4.2rem);
+    line-height: .9;
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
   }
 
   .hero-copy {
@@ -919,7 +933,25 @@ h3,
   .chapter-card.featured {
     grid-column: auto;
     grid-row: auto;
-    min-height: 390px;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+  }
+
+  .chapter-card img {
+    object-position: center top;
+  }
+
+  .chapter-card-copy {
+    inset: auto 18px 16px;
+  }
+
+  .chapter-card h3 {
+    font-size: 1.08rem;
+  }
+
+  .chapter-card p {
+    font-size: .9rem;
+    line-height: 1.45;
   }
 
   .character-card img {
