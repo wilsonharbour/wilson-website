@@ -964,6 +964,17 @@ h3,
     border-radius: 22px;
   }
 }
+.universe-map{
+
+    padding:70px 0;
+
+}
+
+.map-wrapper{
+
+    border-radius:18px;
+
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -974,4 +985,35 @@ h3,
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
   }
+}
+/*=========================
+    UNIVERSE MAP
+==========================*/
+
+.universe-map{
+
+    padding:120px 0;
+
+}
+
+.map-wrapper{
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 25px 80px rgba(0,0,0,.45);
+
+    background:#09110a;
+
+}
+
+.map-wrapper img{
+
+    width:100%;
+
+    display:block;
+
 }
