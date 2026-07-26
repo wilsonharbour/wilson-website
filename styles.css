@@ -1017,3 +1017,8 @@ h3,
     display:block;
 
 }
+#copyButton.copied{
+    background:#00c46a;
+    color:#fff;
+    transition:.25s;
+}
